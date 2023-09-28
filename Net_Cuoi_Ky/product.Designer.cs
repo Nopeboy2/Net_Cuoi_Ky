@@ -207,10 +207,10 @@
             // 
             // txttimkiem
             // 
-            this.txttimkiem.Location = new System.Drawing.Point(14, 11);
+            this.txttimkiem.Location = new System.Drawing.Point(3, 11);
             this.txttimkiem.Multiline = true;
             this.txttimkiem.Name = "txttimkiem";
-            this.txttimkiem.Size = new System.Drawing.Size(279, 31);
+            this.txttimkiem.Size = new System.Drawing.Size(290, 31);
             this.txttimkiem.TabIndex = 0;
             // 
             // panel3

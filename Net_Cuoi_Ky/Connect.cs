@@ -10,7 +10,7 @@ namespace Net_Cuoi_Ky
 {
     internal class Connect
     {
-        private string constr = @"Data Source=LAPTOP-F78SMRJU\THUHUYEN;Initial Catalog=net_cuoi_ki;Integrated Security=True";
+        private string constr = @"Data Source=LAPTOP-BMIE6LU9;Initial Catalog=net_db;Integrated Security=True";
         private SqlConnection conn;
         public Connect()
         {
