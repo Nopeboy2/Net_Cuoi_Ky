@@ -1,6 +1,6 @@
 ﻿namespace Net_Cuoi_Ky
 {
-    partial class Menu
+    partial class Bill
     {
         /// <summary>
         /// Required designer variable.
@@ -334,7 +334,7 @@
             this.dgvmenu.Size = new System.Drawing.Size(443, 432);
             this.dgvmenu.TabIndex = 0;
             // 
-            // Menu
+            // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -342,8 +342,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Menu";
-            this.Text = "Menu";
+            this.Name = "Bill";
+            this.Text = "Bill";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

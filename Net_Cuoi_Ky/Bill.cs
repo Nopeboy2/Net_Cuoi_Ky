@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Net_Cuoi_Ky
 {
-    public partial class Menu : Form
+    public partial class Bill : Form
     {
-        public Menu()
+        public Bill()
         {
             InitializeComponent();
         }

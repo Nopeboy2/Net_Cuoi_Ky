@@ -41,7 +41,6 @@
             this.txtmakh = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.txttimkiem = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnlammoi = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
@@ -49,33 +48,36 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcustomer)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dgvcustomer);
-            this.panel3.Location = new System.Drawing.Point(13, 60);
+            this.panel3.Location = new System.Drawing.Point(13, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(372, 378);
+            this.panel3.Size = new System.Drawing.Size(763, 757);
             this.panel3.TabIndex = 5;
             // 
             // dgvcustomer
             // 
             this.dgvcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcustomer.Location = new System.Drawing.Point(14, 20);
+            this.dgvcustomer.Location = new System.Drawing.Point(3, 3);
             this.dgvcustomer.Name = "dgvcustomer";
             this.dgvcustomer.RowHeadersWidth = 51;
             this.dgvcustomer.RowTemplate.Height = 24;
-            this.dgvcustomer.Size = new System.Drawing.Size(342, 344);
+            this.dgvcustomer.Size = new System.Drawing.Size(757, 751);
             this.dgvcustomer.TabIndex = 0;
             this.dgvcustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcustomer_CellClick);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnlammoi);
             this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.btnxoa);
             this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnsua);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnthem);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtemail);
             this.panel2.Controls.Add(this.txtsodt);
@@ -83,9 +85,9 @@
             this.panel2.Controls.Add(this.txtmakh);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.txttimkiem);
-            this.panel2.Location = new System.Drawing.Point(391, 12);
+            this.panel2.Location = new System.Drawing.Point(799, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(397, 426);
+            this.panel2.Size = new System.Drawing.Size(516, 757);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -179,20 +181,9 @@
             this.txttimkiem.Size = new System.Drawing.Size(279, 31);
             this.txttimkiem.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnlammoi);
-            this.panel1.Controls.Add(this.btnxoa);
-            this.panel1.Controls.Add(this.btnsua);
-            this.panel1.Controls.Add(this.btnthem);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 42);
-            this.panel1.TabIndex = 3;
-            // 
             // btnlammoi
             // 
-            this.btnlammoi.Location = new System.Drawing.Point(276, 6);
+            this.btnlammoi.Location = new System.Drawing.Point(407, 298);
             this.btnlammoi.Name = "btnlammoi";
             this.btnlammoi.Size = new System.Drawing.Size(81, 33);
             this.btnlammoi.TabIndex = 3;
@@ -202,7 +193,7 @@
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(189, 6);
+            this.btnxoa.Location = new System.Drawing.Point(407, 245);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(81, 33);
             this.btnxoa.TabIndex = 2;
@@ -212,7 +203,7 @@
             // 
             // btnsua
             // 
-            this.btnsua.Location = new System.Drawing.Point(102, 6);
+            this.btnsua.Location = new System.Drawing.Point(407, 187);
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(81, 33);
             this.btnsua.TabIndex = 1;
@@ -222,7 +213,7 @@
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(15, 6);
+            this.btnthem.Location = new System.Drawing.Point(407, 123);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(81, 33);
             this.btnthem.TabIndex = 0;
@@ -234,10 +225,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1482, 953);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "Customer";
             this.Text = "Customer";
             this.Load += new System.EventHandler(this.Customer_Load);
@@ -245,7 +235,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvcustomer)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,7 +254,6 @@
         private System.Windows.Forms.TextBox txtmakh;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txttimkiem;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnlammoi;
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnsua;

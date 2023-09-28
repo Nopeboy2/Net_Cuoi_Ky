@@ -28,7 +28,7 @@ namespace Net_Cuoi_Ky
         {
             if(txtUser.Text != string.Empty && txtPassword.Text != string.Empty)
             {
-                string query = string.Format("select * from NguoiDung where Users ='{0}' and Password ='{1}'",
+                string query = string.Format("select * from TaiKhoan where Users ='{0}' and Password ='{1}'",
                 txtUser.Text,
                 txtPassword.Text
                 );

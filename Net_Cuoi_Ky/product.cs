@@ -20,7 +20,7 @@ namespace Net_Cuoi_Ky
         private void btnthem_Click(object sender, EventArgs e)
         {
             string query = string.Format(
-                "insert into sanpham  VALUES ('{0}', '{1}', '{2}', '{3}')",
+                "insert into sanpham  VALUES ('{0}','{1}','{2}','{3}')",
                txtmasp.Text,
                txttensp.Text,
                txtkichco.Text,
@@ -36,9 +36,6 @@ namespace Net_Cuoi_Ky
             {
                 MessageBox.Show("Thêm mới thất bại!");
             }
-
-
-
         }
 
         private void product_Load(object sender, EventArgs e)
@@ -47,7 +44,7 @@ namespace Net_Cuoi_Ky
         }
         public void getdata()
         {
-            string q = "select * from sanpham";
+            string q = "select * from ";
             dgvproduct.DataSource = kn.laydulieu(q);
         }
         public void cleartext()
@@ -124,6 +121,10 @@ namespace Net_Cuoi_Ky
                 txtkichco.Text = dgvproduct.Rows[r].Cells["kichco"].Value.ToString();
                 txtgiathue.Text = dgvproduct.Rows[r].Cells["giathue"].Value.ToString();
             }
+        }
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
-}
 }
