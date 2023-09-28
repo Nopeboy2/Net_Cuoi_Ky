@@ -189,7 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(870, 521);
+            this.ClientSize = new System.Drawing.Size(1482, 953);
             this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnLogin);
