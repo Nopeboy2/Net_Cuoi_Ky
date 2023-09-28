@@ -19,8 +19,8 @@ namespace Net_Cuoi_Ky
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Products frm = new Products();
-            frm.MdiParent = this;
+            this.Hide();
+            product frm = new product();
             frm.Show();
         }
 
@@ -40,6 +40,21 @@ namespace Net_Cuoi_Ky
         {
             this.Hide();
             Login frm = new Login();
+            frm.Show();
+        }
+
+        private void thôngTinKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Customer frm = new Customer();
+            frm.Show();
+
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu frm = new Menu();
             frm.Show();
         }
     }
