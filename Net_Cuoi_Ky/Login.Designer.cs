@@ -32,10 +32,11 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbbLoaiTK = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 231);
+            this.label3.Location = new System.Drawing.Point(28, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 21);
             this.label3.TabIndex = 2;
@@ -52,7 +53,7 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(217, 131);
+            this.txtUser.Location = new System.Drawing.Point(180, 133);
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(383, 33);
@@ -60,7 +61,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(217, 221);
+            this.txtPassword.Location = new System.Drawing.Point(180, 212);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '♦';
@@ -69,30 +70,22 @@
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(478, 295);
+            this.btnDangKy.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnDangKy.ForeColor = System.Drawing.Color.Red;
+            this.btnDangKy.Location = new System.Drawing.Point(268, 365);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(101, 37);
+            this.btnDangKy.Size = new System.Drawing.Size(111, 37);
             this.btnDangKy.TabIndex = 4;
             this.btnDangKy.Text = "REGISTER";
-            this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(643, 221);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(111, 35);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "REFRESH";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightCoral;
-            this.label4.Location = new System.Drawing.Point(234, 300);
+            this.label4.Location = new System.Drawing.Point(28, 370);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(222, 24);
             this.label4.TabIndex = 7;
@@ -100,50 +93,73 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(643, 127);
+            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDangNhap.Location = new System.Drawing.Point(638, 200);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(111, 37);
+            this.btnDangNhap.Size = new System.Drawing.Size(111, 47);
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "LOGIN";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 138);
+            this.label2.Location = new System.Drawing.Point(28, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 22);
             this.label2.TabIndex = 8;
             this.label2.Text = "USER :";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 301);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 21);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Login With :";
+            // 
+            // cbbLoaiTK
+            // 
+            this.cbbLoaiTK.FormattingEnabled = true;
+            this.cbbLoaiTK.Location = new System.Drawing.Point(180, 301);
+            this.cbbLoaiTK.Name = "cbbLoaiTK";
+            this.cbbLoaiTK.Size = new System.Drawing.Size(383, 24);
+            this.cbbLoaiTK.TabIndex = 10;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(368, 49);
+            this.label1.Location = new System.Drawing.Point(350, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 31);
+            this.label1.Size = new System.Drawing.Size(93, 40);
             this.label1.TabIndex = 9;
             this.label1.Text = "LOGIN";
             // 
-            // DangNhap
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbbLoaiTK);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Name = "DangNhap";
+            this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,10 +171,11 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnDangKy;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbbLoaiTK;
         private System.Windows.Forms.Label label1;
     }
 }

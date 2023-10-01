@@ -21,16 +21,21 @@ namespace Net_Cuoi_Ky
         Connect connect = new Connect();
         private void Form1_Load(object sender, EventArgs e)
         {
-
+                string query = "select * from LoaiTaiKhoan";
+                DataTable tb = connect.laydulieu(query);
+                cbbLoaiTK.DataSource = tb;
+                //cbbLoaiTK.DisplayMember = "LoaiTK";
+                cbbLoaiTK.ValueMember = "LoaiTK";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             if(txtUser.Text != string.Empty && txtPassword.Text != string.Empty)
             {
-                string query = string.Format("select * from TaiKhoan where Users ='{0}' and Password ='{1}'",
+                string query = string.Format("select * from TaiKhoan where TenTK ='{0}' and MatKhau ='{1}' and LoaiTK='{2}'",
                 txtUser.Text,
-                txtPassword.Text
+                txtPassword.Text,
+                cbbLoaiTK.SelectedValue
                 );
                 DataTable dt = connect.laydulieu(query);
                 if (dt.Rows.Count == 1)
@@ -49,13 +54,6 @@ namespace Net_Cuoi_Ky
             {
                 MessageBox.Show("Fill your username and password !");
             }
-            
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            txtUser.Clear();
-            txtPassword.Clear();
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)

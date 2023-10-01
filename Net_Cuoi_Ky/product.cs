@@ -20,7 +20,7 @@ namespace Net_Cuoi_Ky
         private void btnthem_Click(object sender, EventArgs e)
         {
             string query = string.Format(
-                "insert into sanpham  VALUES ('{0}','{1}','{2}','{3}')",
+                "insert into SanPham  VALUES ('{0}','{1}','{2}','{3}')",
                txtmasp.Text,
                txttensp.Text,
                txtkichco.Text,
@@ -44,7 +44,7 @@ namespace Net_Cuoi_Ky
         }
         public void getdata()
         {
-            string q = "select * from ";
+            string q = "select * from SanPham";
             dgvproduct.DataSource = kn.laydulieu(q);
         }
         public void cleartext()
@@ -64,7 +64,7 @@ namespace Net_Cuoi_Ky
         private void btnsua_Click(object sender, EventArgs e)
         {
             string query = string.Format(
-               "update sanpham set tensp ='{1}', kichco= '{2}', giathue='{3}' where masp ='{0}'",
+               "update SanPham set tensp ='{1}', kichco= '{2}', giathue='{3}' where masp ='{0}'",
                txtmasp.Text,
                txttensp.Text,
                txtkichco.Text,
@@ -84,7 +84,7 @@ namespace Net_Cuoi_Ky
         private void btnxoa_Click(object sender, EventArgs e)
         {
             string query = string.Format(
-                "delete sanpham where masp ='{0}'",
+                "delete SanPham where masp ='{0}'",
                 txtmasp.Text
             );
             if (kn.thucthi(query) == true)
@@ -101,7 +101,7 @@ namespace Net_Cuoi_Ky
         private void btntimkiem_Click(object sender, EventArgs e)
         {
             string q = string.Format(
-                "select * from sanpham where masp like N'%{0}%'",
+                "select * from SanPham where masp like N'%{0}%'",
                 txttimkiem.Text
                 );
             dgvproduct.DataSource = kn.laydulieu(q);
@@ -125,6 +125,13 @@ namespace Net_Cuoi_Ky
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home frm = new Home();
+            frm.ShowDialog();
         }
     }
 }

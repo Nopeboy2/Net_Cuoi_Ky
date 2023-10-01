@@ -28,7 +28,7 @@ namespace Net_Cuoi_Ky
         }
         public void getData()
         {
-            string q = " select * from khachhang";
+            string q = " select * from KhachHang";
             dgvcustomer.DataSource = kn.laydulieu(q);
         }
         public void cleartext()
@@ -36,7 +36,7 @@ namespace Net_Cuoi_Ky
             txtmakh.Text = "";
             txttenkh.Text = "";
             txtsodt.Text = "";
-            txtsodt.Text = "";
+            txtemail.Text = "";
             txttimkiem.Text = "";
         }
 
@@ -44,26 +44,33 @@ namespace Net_Cuoi_Ky
         {
             cleartext();
             getData();
+            btnthem.Enabled = true;
         }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            string query = string.Format(
-                "insert into khachhang  VALUES ('{0}', '{1}', '{2}', '{3}')",
-                txtmakh.Text,
+            if (txttenkh.Text == string.Empty || txtsodt.Text == string.Empty || txtemail.Text == string.Empty)
+            {
+                MessageBox.Show("Vui long nhap day du thong tin!");
+            }
+            else
+            {
+                string query = string.Format(
+                "insert into KhachHang VALUES ('{0}', '{1}', '{2}')",
                 txttenkh.Text,
                 txtsodt.Text,
                 txtemail.Text
 
             );
-            if (kn.thucthi(query)==true)
-            {
-                MessageBox.Show("Thêm mới thành công!");
-                btnlammoi.PerformClick();
-            }
-            else
-            {
-                MessageBox.Show("Thêm mới thất bại!");
+                if (kn.thucthi(query) == true)
+                {
+                    MessageBox.Show("Thêm mới thành công!");
+                    btnlammoi.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm mới thất bại!");
+                }
             }
             
         }
@@ -71,12 +78,11 @@ namespace Net_Cuoi_Ky
         private void btnsua_Click(object sender, EventArgs e)
         {
             string query = string.Format(
-                "update khachhang set  tenkh ='{1}', sdt= '{2}', email ='{3}' where makh ='{0}'",
+                "update KhachHang set  tenkh ='{1}', sdt= '{2}', email ='{3}' where makh ='{0}'",
                 txtmakh.Text,
                 txttenkh.Text,
                 txtsodt.Text,
                 txtemail.Text
-
             );
             if (kn.thucthi(query) == true)
             {
@@ -92,10 +98,8 @@ namespace Net_Cuoi_Ky
         private void btnxoa_Click(object sender, EventArgs e)
         {
             string query = string.Format(
-                "delete  khachhang where makh ='{0}'",
+                "delete  KhachHang where makh ='{0}'",
                 txtmakh.Text
-                
-
             );
             if (kn.thucthi(query) == true)
             {
@@ -104,15 +108,16 @@ namespace Net_Cuoi_Ky
             }
             else
             {
-                MessageBox.Show("Xóa   thất bại!");
+                MessageBox.Show("Xóa thất bại!");
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             string q = string.Format(
-                "Select * from khachhang where makh = '{0}'",
-                txtmakh.Text);
+                "Select * from KhachHang where MaKH = '{0}'",
+                txtmakh.Text
+                );
             dgvcustomer.DataSource = kn.laydulieu(q);
         }
 
@@ -132,6 +137,13 @@ namespace Net_Cuoi_Ky
                 txtemail.Text = dgvcustomer.Rows[r].Cells["email"].Value.ToString();
                 
             }
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home frm = new Home();   
+            frm.Show();
         }
     }
 }

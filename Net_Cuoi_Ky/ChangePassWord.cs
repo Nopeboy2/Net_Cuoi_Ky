@@ -56,5 +56,10 @@ namespace Net_Cuoi_Ky
             Home frm = new Home();  
             frm.ShowDialog();
         }
+
+        private void ChangePassWord_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

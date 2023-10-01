@@ -18,7 +18,7 @@ namespace Net_Cuoi_Ky
         }
         public DataTable laydulieu(string truyvan)
         {
-            SqlDataAdapter da = new SqlDataAdapter(truyvan, conn);
+            SqlDataAdapter da = new SqlDataAdapter(truyvan,conn);
             DataTable tb = new DataTable();
             da.Fill(tb);
             return tb;
@@ -28,7 +28,7 @@ namespace Net_Cuoi_Ky
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand(truyvan, conn);
+                SqlCommand cmd = new SqlCommand(truyvan,conn);
                 int r = cmd.ExecuteNonQuery();
                 conn.Close();
                 return r > 0;

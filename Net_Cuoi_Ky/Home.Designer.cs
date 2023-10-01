@@ -45,7 +45,7 @@
             // 
             this.btnSanPham.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnSanPham.Location = new System.Drawing.Point(70, 250);
+            this.btnSanPham.Location = new System.Drawing.Point(70, 331);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Size = new System.Drawing.Size(160, 50);
             this.btnSanPham.TabIndex = 1;
@@ -66,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(294, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(888, 755);
@@ -92,7 +93,7 @@
             this.btnDangXuat.Location = new System.Drawing.Point(70, 645);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(160, 50);
-            this.btnDangXuat.TabIndex = 5;
+            this.btnDangXuat.TabIndex = 4;
             this.btnDangXuat.Text = "ĐĂNG XUẤT";
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
@@ -104,7 +105,7 @@
             this.btnDoiMatKhau.Location = new System.Drawing.Point(70, 545);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(160, 50);
-            this.btnDoiMatKhau.TabIndex = 2;
+            this.btnDoiMatKhau.TabIndex = 3;
             this.btnDoiMatKhau.Text = "ĐỎI MẬT KHẨU";
             this.btnDoiMatKhau.UseVisualStyleBackColor = true;
             this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
@@ -116,7 +117,7 @@
             this.btnHoaDon.Location = new System.Drawing.Point(70, 443);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(160, 50);
-            this.btnHoaDon.TabIndex = 3;
+            this.btnHoaDon.TabIndex = 2;
             this.btnHoaDon.Text = "HÓA ĐƠN";
             this.btnHoaDon.UseVisualStyleBackColor = true;
             // 
@@ -124,11 +125,11 @@
             // 
             this.btnNguoiDung.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNguoiDung.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnNguoiDung.Location = new System.Drawing.Point(70, 347);
+            this.btnNguoiDung.Location = new System.Drawing.Point(70, 222);
             this.btnNguoiDung.Name = "btnNguoiDung";
             this.btnNguoiDung.Size = new System.Drawing.Size(160, 50);
             this.btnNguoiDung.TabIndex = 0;
-            this.btnNguoiDung.Text = "NGƯỜI DÙNG";
+            this.btnNguoiDung.Text = "KHÁCH HÀNG";
             this.btnNguoiDung.UseVisualStyleBackColor = true;
             this.btnNguoiDung.Click += new System.EventHandler(this.btnNguoiDung_Click);
             // 
